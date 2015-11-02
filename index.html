@@ -24,10 +24,10 @@
                         <a class="nav-link" href="#">Фото и видео</a>
                     </li>
                     <li class="right">
-                        <a class="nav-link" href="#">Карта штата</a>
+                        <a class="nav-link" href="#">Гостиницы</a>
                     </li>
                     <li class="right">
-                        <a class="nav-link" href="#">Гостиницы</a>
+                        <a class="nav-link" href="#">Карта штата</a>
                     </li>
                 </ul>
             </nav>
@@ -38,25 +38,28 @@
             <img src="img/background-text%20458x352.png" alt="Welcome to the gorgeous Sedona" width="456" height="352">
         </div>
         <section class="reasons">
-            <h1 class="reasons-header">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+            <h1 class="reasons-header">Седона &#8212; небольшой городок в Аризоне, заслуживающий большего!</h1>
             <p class="reasons-header text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
             <div class="reasons-container reason-1 clearfix">
                 <div class="reasons-item left">
                     <h2 class="reasons-title">Настоящий городок</h2>
-                    <span>- №1 -</span>
+                    <span>&#8212; №1 &#8212;</span>
                     <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
                 </div>
             </div>
             <div class="features clearfix">
                 <div class="features-item">
+                    <div class="icon icon-house"></div>
                     <h2 class="features-title">Жилье</h2>
                     <p class="features-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </div>
                 <div class="features-item">
+                    <div class="icon icon-food"></div>
                     <h2 class="features-title">Еда</h2>
                     <p class="features-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </div>
                 <div class="features-item">
+                    <div class="icon icon-gift"></div>
                     <h2 class="features-title">Сувениры</h2>
                     <p class="features-text">Не только китайского, но и местного производства!</p>
                 </div>
@@ -64,24 +67,24 @@
             <div class="reasons-container reason-2 clearfix">
                 <div class="reasons-item right">
                     <h2 class="reasons-title">Там есть мост дьявола</h2>
-                    <span>- №2 -</span>
+                    <span>&#8212; №2 &#8212;</span>
                     <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                 </div>
             </div>
             <div class="reasons clearfix">
                 <div class="reasons-item reason-grey">
                     <h2 class="reasons-title">Небольшая площадь</h2>
-                    <span>- №3 -</span>
+                    <span>&#8212; №3 &#8212;</span>
                     <p>Все достопримеча-тельности находятся очень близко</p>
                 </div>
                 <div class="reasons-item reason-grey">
                     <h2 class="reasons-title">Красивая дорога</h2>
-                    <span>- №4 -</span>
+                    <span>&#8212; №4 &#8212;</span>
                     <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                 </div>
                 <div class="reasons-item reason-grey">
                     <h2 class="reasons-title">Мало туристов</h2>
-                    <span>- №5 -</span>
+                    <span>&#8212; №5 &#8212;</span>
                     <p>Большинство едет в Гранд Каньон и толпится там</p>
                 </div>
             </div>
@@ -90,22 +93,33 @@
             <h3 class="search-title">Заинтересовались?</h3>
             <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             <div class="hotel-search">Поиск гостиницы в Седоне</div>
-            <form class="hotel-form" action="#" method="get" class="clearfix">
-                <label for="date-in">Дата заезда</label>
-                <input type="date" name="date-in" id="date-in">
-                <label for="date-out">Дата выезда</label>
-                <input type="date" name="date-out" id="date-out">
-                <input type="number" min="1" step="1" name="adults" id="adults">
-                <label for="adults">Взрослые</label>
-                <label for="children">Дети</label>
-                <input type="number" min="0" step="1" name="children" id="children">
-                <div class="btn">
+            <div class="map"><img src="img/map-768x593.jpg" alt="Карта" width="768" height="593">
+        </div>
+            <form class="hotel-form clearfix" action="#" method="get">
+                <div class="row row1 clearfix">
+                    <label class="column-left" for="date-in">Дата заезда:</label>
+                <input class="column-right column2 input big" type="date" name="date-in" id="date-in">
+                </div>
+                <div class="row row2 clearfix">
+                  <label class="column-left" for="date-out">Дата выезда:</label>
+                  <input class="column-right column2 input big" type="date" name="date-out" id="date-out">
+                </div>
+                <div class="row row3 clearfix">
+                <label class="column-left" for="adults">Взрослые:</label>
+                <div class="column-right">
+                  <input class="column2 input small adults" type="number" min="1" step="1" name="adults" id="adults">
+                  <input class="column2 input small kids" type="number" min="0" step="1" name="children" id="children">
+                    <label class="column2 label-kids" for="children">Дети:</label>
+                </div>
+                </div>
+                <div class="button clearfix">
                     <input class="btn-find" type="submit" value="Найти">
                 </div>
+                
             </form>
+            
         </section>
-        <div class="map"><img src="img/map-768x593.jpg" alt="Карта" width="768" height="593">
-        </div>
+        
     </div>
     <footer class="main-footer">
         <div class="container clearfix">
