@@ -1,3 +1,69 @@
+/* Иконочный шрифт */
+@font-face {
+  font-family: 'symbols-sedona';
+  src: url('../font/symbols-sedona.eot?60737633');
+  src: url('../font/symbols-sedona.eot?60737633#iefix') format('embedded-opentype'),
+       url('../font/symbols-sedona.woff?60737633') format('woff'),
+       url('../font/symbols-sedona.ttf?60737633') format('truetype'),
+       url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'symbols-sedona';
+    src: url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "symbols-sedona";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-facebook:before { content: '\66'; } /* 'f' */
+.icon-twitter:before { content: '\74'; } /* 't' */
+.icon-up-dir:before { content: '\25b2'; } /* '▲' */
+.icon-down-dir:before { content: '\25bc'; } /* '▼' */
+.icon-star:before { content: '\2605'; } /* '★' */
+.icon-check-off:before { content: '\2610'; } /* '☐' */
+.icon-check-on:before { content: '\2611'; } /* '☑' */
+.icon-calendar:before { content: '\e800'; } /* '' */
+.icon-plus:before { content: '\e801'; } /* '' */
+.icon-minus:before { content: '\e802'; } /* '' */
+.icon-youtube:before { content: '\f39e'; } /* '' */
+
+/* Стили страниц*/
  {
     outline: 1px solid black;
 }
@@ -45,7 +111,7 @@ h2 {
 }
 .main-navigation {
     width: 676px;
-    margin: auto;
+    margin: 0 auto;
     font-size: 0;
 }
 .main-navigation ul {
@@ -63,7 +129,7 @@ h2 {
     width: 20%;
     margin-right: 18px;
 }
-.main-navigation li:nth-child(3) {
+.main-navigation li:nth-child(3n) {
     margin-right: 0;
 }
 .left {
@@ -100,103 +166,129 @@ h2 {
 /*стили для index*/
 .container-content {
     background-color: #e4f1fa;
-    background-image: url("index-white-768x37.png"), url("background-photo-768x512.jpg");
-    background-position: 0 475px, 100%;
+    background-image: url("../img/index-white-768x37.png"), url("../img/background-photo-768x512.jpg");
+    background-position: 0 476px, 0 0, 100%;
     background-repeat: no-repeat;
-    height: 510px;
-    margin-bottom: 60px;
+    height: 511px;
+    margin-bottom: 57px;
+    padding-top: 1px;
 }
-.container-content img {
-    position: relative;
-    left: 156px;
-    top: 75px;
+.big-logo {
+    width: 456px;
+    height: 352px;
+    margin: 0 auto;
+    margin-top: 75px;
+}
+.big-logo img {
+    width: 456px;
+    height: 352px;
 }
 .reasons-header{
-    margin-left: 0;
     padding: 0 75px;
     text-align: center;
     margin-bottom: 29px;
 }
 .text {
-    margin-bottom: 52px;
-}
-.reasons-container {
-    width: 768px;
+    margin-bottom: 53px;
 }
 .reason-1 {
-    background-image: url(index-photo-small-1-512x256.jpg);
+    background-image: url(../img/index-photo-small-1-512x256.jpg);
     background-repeat: no-repeat;
-    background-position: 255px 0;
+    background-position: 256px 0;
 }
 .reason-2 {
-    background-image: url(index-photo-small-2-512x256.jpg);
+    background-image: url(../img/index-photo-small-2-512x256.jpg);
     background-repeat: no-repeat;
 }
 .reasons-item {
-    width: 176px;
+    width: 184px;
     background-color: #81b3d2;
     color: #ffffff;
     text-align: center;
-    padding: 30px 40px;
+    padding-top: 31px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 23px;
 }
 .reasons-title {
     color: #ffffff;
-    padding: 1px 12px;
-    margin-bottom: 22px;
+    margin-bottom: 23px;
+    padding: 0px 16px;
 }
 .reasons-item p {
-    padding: 7px 0px;
-    margin-bottom: 1px;
-}
-.features-item {
-    float: left;
-    width: 196px;
-    text-align: center;
-    padding: 30px;
+    padding-top: 7px;
 }
 .icon {
     width: 76px;
     height: 76px;
     margin: 26px auto;
-    background-image: url("index-icon-sprite.png");
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
 }
 .icon-house {
     background-position: 0;
 }
 .icon-food {
-    background-position: 145px 0;
+    background-position: -87px 0;
 }
 .icon-gift {
-    background-position: 70px 0;
+    background-position: -168px 0;
+}
+.features-item {
+    float: left;
+    width: 186px;
+    min-height: 270px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 .features-title {
     margin-top: px;
     padding: 5px 0;
 }
 .features-text {
-    padding: 0px 10px;
+    width: 159px;
+    margin: 0 auto;
     margin-bottom: 30px;
+}
+.gift-text {
+    width: 165px;
 }
 .reason-grey {
     float: left;
     background-color: #eeeeee;
     color: #000000;
+    margin-bottom: 10px;
+}
+.grey-title {
+    color: #000000;
+    margin-bottom: 24px;
+}
+.reason-grey p {
+    padding: 7px 7px;
+    width: 170px;
+}
+.reason-grey .narrow-text {
+    width: 152px;
+    margin: 14px auto;
 }
 .search-form {
     width: 568px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 43px;
+    margin: 0 auto;
     text-align: center;
 }
 .search-title {
-    padding: 15px 0;
+    padding: 14px 0;
     font-size: 30px;
     margin-bottom: 17px;
+    font-weight: bold;
 }
 .search-form p {
     line-height: 24px;
-    padding: 0 67px;
+    width: 440px;
+    margin: 0 auto;
     margin-bottom: 45px;
 }
 .hotel-search {
@@ -205,6 +297,7 @@ h2 {
     font-weight: bold;
     color: #ffffff;
     padding: 33px 0;
+    margin-bottom: 0px;
 }
 .hotel-form {
     position: relative;
@@ -213,15 +306,21 @@ h2 {
     line-height: 26px;
     z-index: 2;
     background-color: #ffffff;
+    margin-bottom: 78px;
 }
 .row {
-    width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 4px;
+}
+.row3 {
+    margin-bottom: 52px;
 }
 .column-left {
     float: left;
+    width: 105px;
     text-align: left;
-    padding: 6px 0;
+    padding-top: 6px;
+    padding-left: 1px;
+    padding-bottom: 4px;
 }
 .column-right {
     float: right;
@@ -230,30 +329,64 @@ h2 {
 .hotel-form .input {
     border: none;
     background-color: #f2f2f2;
-    padding: 7px;
+    padding: 8px;
+}
+.icon-calendar {
+    font-size: 21px;
+    position: relative;
+    top: -30px;
+    right: -157px;
 }
 .big {
-    width: 333px;
     float: right;
+    width: 333px;
+    text-transform: uppercase;
 }
 .small {
+    position: relative;
     width: 100px;
     text-align: center;
-    height: 22px;
 }
 .adults {
     float: left;
+}
+.icon-minus,
+.icon-plus {
+    color: #a9a9a9;
+}
+.icon-minus-adults {
+    position: absolute;
+    width: 30px;
+    left: 171px;
+    top: 197px;
+}
+.icon-plus-adults {
+    position: absolute;
+    width: 30px;
+    left: 246px;
+    top: 197px;
+}
+.icon-minus-kids {
+    position: absolute;
+    width: 30px;
+    left: 404px;
+    top: 197px;
+}
+.icon-plus-kids {
+    position: absolute;
+    width: 30px;
+    left: 480px;
+    top: 197px;
 }
 .kids {
     float: right;
 }
 .label-kids {
     float: right;
-    padding: 6px 0;
-    margin-right: 26px;
+    padding: 7px 0;
+    margin-right: 24px;
 }
 .btn-find {
-    margin-top: 22px;
     border: none;
     width: 100%;
     font-size: 21px;
@@ -272,13 +405,19 @@ h2 {
 }
 /*стили для hotels*/
 .feature-search-form {
-    background-image: url("hotels-bk-768x418.jpg");
+    background-image: url("../img/hotels-bk-768x418.jpg");
+    background-position: 0px -56px;
+    background-repeat: no-repeat;
     color: #ffffff;
+    margin-bottom: 4px;
 }
-h3 {
+.feature-search-form h3 {
     font-size: 16px;
     font-weight: normal;
     line-height: 21px;
+    margin-bottom: 13px;
+}
+.right-column h3 {
     margin-bottom: 25px;
 }
 .column {
@@ -286,53 +425,138 @@ h3 {
     padding: 0;
 }
 .column label {
-    display: inline-block;
-    padding: 0px 23px;
-    margin-bottom: 24px;
+    display: block;
+    padding: 0px 5px;
+    margin-bottom: 14px;
+}
+.feature-search-form input[type="checkbox"] {
+    display: none;
+}
+.icon-check-off:before {
+    font-size: 25px;
+    margin-top: 5px;
+    position: relative;
+    left: -11px;
+    top: 4px;
+}
+.icon-check-on:before {
+    font-size: 25px;
+    margin-top: 5px;
+    position: relative;
+    left: -11px;
+    top: 5px;
 }
 .infrastructure {
-    margin: 11px 46px;
+    margin: 12px 46px;
     float: left; 
+    margin-bottom: 17px;
 }
 .accomodation-type {
-    margin: 11px 35px;
+    margin: 12px 35px;
     float: left;
+    margin-bottom: 17px;
 }
 .right-column {
     width: 250px;
     min-height: 158px;
-    margin-left: 8px;
-    margin-top: 6px;
+    margin-left: 9px;
+    margin-top: 7px;
     float: left;
 }
-.price-range {
-    display: inline-block;
+.range-filter {
+    display: block;
+    width: 225px;
+    margin-left: -3px;
+    margin-top: -16px;
+    margin-bottom: 3px;
+}
+.price-controls {
+    font-size: 0;
     border: 2px solid #ffffff;
     border-radius: 3px;
-    padding: 10px 5px;
+    margin-bottom: 3px;
+}
+.price-controls label {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    font-size: 14px;
+    text-align: right;
+}
+.price-controls input {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    text-align: left;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background: none;
+    width: 35px;
+    padding: 6px 14px;
+    padding-left: 0;
+    margin-right: px;
+}
+.min-price:after {
+    content: "";
+    height: 22px;
+    border: 1px solid #ffffff;
+}
+.range-controls {
+    position: relative;
+    height: 22px;
+    padding-top: 17px;
+    padding-left: 5px;
+}
+.range-controls .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #ffffff;
+}
+.range-controls .toggle {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    cursor: pointer;
+    border: 8px solid #fff;
+    border-radius: 50%;
+}
+.range-controls .toggle-min {
+    left: 4px;
+    background: #ababab;
+}
+
+.range-controls .toggle-max {
+    left: 160px;
+    background: #1c4f80;
 }
 fieldset {
     border: none;
 }
 .btn-show {
     display: inline-block;
+    vertical-align: top;
     padding: 7px 34px;
     border: 2px solid #ffffff;
     border-radius: 3px;
     text-transform: uppercase;
     background: transparent;
-    margin-top: 20px;
-    margin-left: 52px;
+    margin-left: 51px;
 }
 .results {
     width: 676px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3px;
+    margin: 0 auto;
+    margin-bottom: 2px;
 }
 .results-count, 
 .sort {
     display: inline-block;
+    vertical-align: middle;
 }
 .results-count {
     font-size: 21px;
@@ -343,13 +567,30 @@ fieldset {
 .sort {
     font-size: 12px;
     line-height: 18px;
-    margin-right: 20px;
+    margin-right: 35px;
 }
 .results label {
     font-size: 12px;
     line-height: 18px;
     color: #81b3d2;
-    margin-right: 13px;
+    margin-right: 29px;
+}
+.results input[type="checkbox"] {
+    display: none;
+}
+.icon-up-dir,
+.icon-down-dir {
+    font-size: 21px;
+    color: #81b3d2;
+    position: relative;
+}
+.icon-up-dir {
+    left: 83px;
+    top: 2px;
+}
+.icon-down-dir {
+    left: 74px;
+    top: 2px;
 }
 .results-container {
     width: 768px;
@@ -384,19 +625,22 @@ fieldset {
 .results-hotel-type,
 .results-price-range {
     display: inline-block;
+    vertical-align: top;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
 }
 .results-hotel-type {
+    width: 110px;
     margin-left: 32px;
 }
 .results-price-range {
-    margin-left: 34px;
+    margin-left: 2px;
     margin-right: 90px;
 }
 .btn {
     display: inline-block;
+    vertical-align: top;
     text-decoration: none;
     font-size: 14px;
     line-height: 21px;
@@ -413,23 +657,39 @@ fieldset {
 .btn-book {
     background-color: #766357;
 }
+.stars {
+    float: right;
+    width: 110px;
+}
+.icon-star {
+    float: right;
+    width: 24px;
+    color: #81b3d2;
+    font-size: 18px;
+    margin-right: 0px;
+    position: relative;
+    left: 3px;
+    top: -3px;
+}
 .rating {
     float: right;
     width: 90px;
     padding: 4px 5px;
     background-color: #f2f2f2;
     color: #666666;
-    margin-top: 62px;
+    margin-top: 40px;
 }
-/* Общие стили*/
+/* Стили футера */
 
 .main-footer {
     position: relative;
-    padding: 5px 32px;
-    margin-top: 78px;
+    padding: 6px 32px;
     z-index: 3;
     opacity: 0.9;
     background-color: #ffffff;
+}
+.inner-footer {
+    opacity: 1;
 }
 .hashtag {
     float: left;
@@ -449,19 +709,16 @@ fieldset {
     display: inline-block;
     vertical-align: top;
     width: 46px;
-    height: 48px;
-    text-decoration: none;
-}
-.social-btn-tw {
-    background: #81b3d2 url("twitter-icon-17x15.png") no-repeat center;
+    min-height: 34px;
+    background-color: #81b3d2;
     margin-right: 6px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 14px;
 }
-.social-btn-fb {
-    background: #81b3d2 url("facebook-icon-10x19.png") no-repeat center;
-    margin-right: 7px;
-}
-.social-btn-youtube {
-    background: #81b3d2 url("youtube-icon-20x16.png") no-repeat center;
+.social-btn:last-child {
+    margin-right: 0;
 }
 .footer-copyright {
     float: right;
@@ -470,6 +727,6 @@ fieldset {
 }
 .footer-copyright span {
     display: inline-block;
-    padding: 9px 5px;
     vertical-align: top;
+    padding: 9px 5px;
 }

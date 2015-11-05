@@ -13,7 +13,9 @@
     <header class="main-header">
         <div class="container">
             <div class="logo">
-                <img src="img/sedona-logo-138x70.png" alt="Логотип" width="138" height="70">
+                <a href="index.html">
+                    <img src="img/sedona-logo-138x70.png" alt="Логотип" width="138" height="70">
+                </a>
             </div>
             <nav class="main-navigation">
                 <ul class="clearfix">
@@ -24,7 +26,7 @@
                         <a class="nav-link" href="#">Фото и видео</a>
                     </li>
                     <li class="right">
-                        <a class="nav-link" href="#">Гостиницы</a>
+                        <a class="nav-link" href="hotels.html">Гостиницы</a>
                     </li>
                     <li class="right">
                         <a class="nav-link" href="#">Карта штата</a>
@@ -35,7 +37,9 @@
     </header>
     <div class="container">
         <div class="container-content">
-            <img src="img/background-text%20458x352.png" alt="Welcome to the gorgeous Sedona" width="456" height="352">
+            <figure class="big-logo">
+            <img src="./img/background-text%20458x352.png" alt="Welcome to the gorgeous Sedona" width="456" height="352">
+                </figure>
         </div>
         <section class="reasons">
             <h1 class="reasons-header">Седона &#8212; небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -44,7 +48,7 @@
                 <div class="reasons-item left">
                     <h2 class="reasons-title">Настоящий городок</h2>
                     <span>&#8212; №1 &#8212;</span>
-                    <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+                    <p>Седона &#8212; не аттракцион для туристов, там течет своя жизнь</p>
                 </div>
             </div>
             <div class="features clearfix">
@@ -61,7 +65,7 @@
                 <div class="features-item">
                     <div class="icon icon-gift"></div>
                     <h2 class="features-title">Сувениры</h2>
-                    <p class="features-text">Не только китайского, но и местного производства!</p>
+                    <p class="features-text gift-text">Не только китайского, но и местного производства!</p>
                 </div>
             </div>
             <div class="reasons-container reason-2 clearfix">
@@ -73,17 +77,17 @@
             </div>
             <div class="reasons clearfix">
                 <div class="reasons-item reason-grey">
-                    <h2 class="reasons-title">Небольшая площадь</h2>
+                    <h2 class="reasons-title grey-title">Небольшая площадь</h2>
                     <span>&#8212; №3 &#8212;</span>
                     <p>Все достопримеча-тельности находятся очень близко</p>
                 </div>
                 <div class="reasons-item reason-grey">
-                    <h2 class="reasons-title">Красивая дорога</h2>
+                    <h2 class="reasons-title grey-title">Красивая дорога</h2>
                     <span>&#8212; №4 &#8212;</span>
-                    <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                    <p class="narrow-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                 </div>
                 <div class="reasons-item reason-grey">
-                    <h2 class="reasons-title">Мало туристов</h2>
+                    <h2 class="reasons-title grey-title">Мало туристов</h2>
                     <span>&#8212; №5 &#8212;</span>
                     <p>Большинство едет в Гранд Каньон и толпится там</p>
                 </div>
@@ -94,47 +98,51 @@
             <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             <div class="hotel-search">Поиск гостиницы в Седоне</div>
             <div class="map"><img src="img/map-768x593.jpg" alt="Карта" width="768" height="593">
-        </div>
+            </div>
             <form class="hotel-form clearfix" action="#" method="get">
                 <div class="row row1 clearfix">
                     <label class="column-left" for="date-in">Дата заезда:</label>
-                <input class="column-right column2 input big" type="date" name="date-in" id="date-in">
+                    <input class="column-right input big" type="text" value="24 апреля 2014" name="date-in" id="date-in">
+                    <i class="icon-calendar"></i>
                 </div>
                 <div class="row row2 clearfix">
-                  <label class="column-left" for="date-out">Дата выезда:</label>
-                  <input class="column-right column2 input big" type="date" name="date-out" id="date-out">
+                    <label class="column-left" for="date-out">Дата выезда:</label>
+                    <input class="column-right input big" type="text" value="4 июля 2014" name="date-out" id="date-out">
+                    <i class="icon-calendar"></i>
                 </div>
                 <div class="row row3 clearfix">
-                <label class="column-left" for="adults">Взрослые:</label>
-                <div class="column-right">
-                  <input class="column2 input small adults" type="number" min="1" step="1" name="adults" id="adults">
-                  <input class="column2 input small kids" type="number" min="0" step="1" name="children" id="children">
-                    <label class="column2 label-kids" for="children">Дети:</label>
-                </div>
+                    <label class="column-left" for="adults">Взрослые:</label>
+                    <div class="column-right">
+                        <input class="input small adults" type="number" min="1" step="1" value="2" name="adults" id="adults">
+                        <i class="icon-minus icon-minus-adults"></i>
+                        <i class="icon-plus icon-plus-adults"></i>
+                        <input class="input small kids" type="number" min="0" step="1" value="0" name="children" id="children">
+                        <i class="icon-minus icon-minus-kids"></i>
+              <i class="icon-plus icon-plus-kids"></i>
+                        <label class="label-kids" for="children">Дети:</label>
+                    </div>
                 </div>
                 <div class="button clearfix">
                     <input class="btn-find" type="submit" value="Найти">
                 </div>
-                
             </form>
-            
         </section>
-        
     </div>
     <footer class="main-footer">
         <div class="container clearfix">
             <span class="hashtag">#visitsedona</span>
             <div class="footer-social">
-                <a href="#" class="social-btn social-btn-tw">Twitter</a>
-                <a href="#" class="social-btn social-btn-fb">Facebook</a>
-                <a href="#" class="social-btn social-btn-youtube">Youtube</a>
+                <a href="#" class="social-btn social-btn-tw"><i class="icon-twitter"></i></a>
+                <a href="#" class="social-btn social-btn-fb"><i class="icon-facebook"></i></a>
+                <a href="#" class="social-btn social-btn-youtube"><i class="icon-youtube"></i></a>
             </div>
             <div class="footer-copyright">
                 <span class="website">Website by</span>
-                <img src="img/htmlacademy-logo-113x39.png" alt="HTML Academy" width="113" height="39" >
+                <a href="#">
+                    <img src="img/htmlacademy-logo-113x39.png" alt="HTML Academy" width="113" height="39">
+                </a>
             </div>
         </div>
     </footer>
 </body>
-
 </html>

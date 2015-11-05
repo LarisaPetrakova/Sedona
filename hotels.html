@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link href="css/normalize.css" rel="stylesheet" >
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -13,7 +13,9 @@
     <header class="main-header">
         <div class="container">
             <div class="logo">
-                <img src="img/sedona-logo-138x70.png" alt="Логотип" width="138" height="70">
+                <a href="index.html">
+                    <img src="img/sedona-logo-138x70.png" alt="Логотип" width="138" height="70">
+                </a>
             </div>
             <nav class="main-navigation">
                 <ul class="clearfix">
@@ -24,7 +26,7 @@
                         <a class="nav-link" href="#">Фото и видео</a>
                     </li>
                     <li class="right">
-                        <a class="nav-link" href="#">Гостиницы</a>
+                        <a class="nav-link" href="hotels.html">Гостиницы</a>
                     </li>
                     <li class="right">
                         <a class="nav-link" href="#">Карта штата</a>
@@ -38,30 +40,46 @@
             <fieldset class="infrastructure column">
                 <h3>Инфраструктура:</h3>
                 <input type="checkbox" name="pool" id="pool-field" checked>
-                <label for="pool-field">Бассейн</label><br>
+                <label class="icon-check-on" for="pool-field">Бассейн</label>
                 <input type="checkbox" name="parking" id="parking-field">
-                <label for="parking-field">Парковка</label><br>
+                <label class="icon-check-off" for="parking-field">Парковка</label>
                 <input type="checkbox" name="wi-fi" id="wi-fi-field">
-                <label for="wi-fi-field">Wi-fi</label>
+                <label class="icon-check-off" for="wi-fi-field">Wi-fi</label>
             </fieldset>
             <fieldset class="accomodation-type column">
                 <h3>Тип жилья:</h3>
                 <input type="checkbox" name="hotel" id="hotel-field" checked>
-                <label for="hotel-field">Гостиница</label><br>
+                <label class="icon-check-on" for="hotel-field">Гостиница</label>
                 <input type="checkbox" name="motel" id="motel-field" checked>
-                <label for="motel-field">Мотель</label><br>
+                <label class="icon-check-on" for="motel-field">Мотель</label>
                 <input type="checkbox" name="apartments" id="apartments-field" checked>
-                <label for="apartments-field">Апартаменты</label>
+                <label class="icon-check-on" for="apartments-field">Апартаменты</label>
             </fieldset>
             <div class="right-column">
-            <fieldset class="price">
-                <div>
-                    <h3 for="price-range">Стоимость в сутки (Р):</h3>
-                <lable class="price-range">От 0<input type="range" min="0" max="4000" step="500" name="pricecount" id="price-range">До 3000
-                </div>
-            </fieldset>
+                <fieldset class="price">
+                    <div>
+                        <h3 class="price-range">Стоимость в сутки (Р):</h3>
+                        <div class="range-filter">
+                            <div class="price-controls">
+                                <label class="min-price">от
+                                    <input name="min-price" type="text" value="0">
+                                </label>
+                                <label class="max-price">до
+                                    <input name="max-price" type="text" value="3000">
+                                </label>
+                            </div>
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="toggle toggle-min"></div>
+                                <div class="toggle toggle-max"></div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
                 <input class="btn-show" type="submit" value="Показать">
-                </div>
+            </div>
         </form>
     </div>
     <div class="results clearfix">
@@ -73,62 +91,80 @@
         <label for="type-sort">По типу</label>
         <input type="checkbox" name="rating-sort" id="rating-sort" checked>
         <label for="rating-sort">По рейтингу</label>
+        <i class="icon-up-dir"></i>
+        <i class="icon-down-dir"></i>
     </div>
     <div class="results-container">
         <div class="hotel">
-        <div class="results-hotel clearfix">
-            <img src="img/hotels-amara-135x90.jpg" alt="Amara Resort & Spa" width="135" height="90">
-            <div class="central-column">
-                <h4 class="hotel-name">Amara Resort & Spa</h4>
-            <span class="results-hotel-type">Гостиница</span>
-            <span class="results-price-range">от 3500 Р.</span>
-            <a class="btn btn-more" href="#">Подробнее</a>
-            <a class="btn btn-book" href="#">Забронировать</a>
+            <div class="results-hotel clearfix">
+                <img src="./img/hotels-amara-135x90.jpg" alt="Amara Resort & Spa" width="135" height="90">
+                <div class="central-column">
+                    <h4 class="hotel-name">Amara Resort & Spa</h4>
+                    <span class="results-hotel-type">Гостиница</span>
+                    <span class="results-price-range">от 3500 Р.</span>
+                    <a class="btn btn-more" href="#">Подробнее</a>
+                    <a class="btn btn-book" href="#">Забронировать</a>
+                </div>
+                <div class="stars clearfix">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                </div>
+                <div class="rating">Рейтинг: 8,5</div>
             </div>
-            <div class="rating">Рейтинг: 8,5</div>
-        </div>
         </div>
         <div class="hotel">
-        <div class="results-hotel clearfix">
-            <img src="img/hotels-desert-135x90.jpg" alt="Desert Quail Inn" width="135" height="90">
-            <div class="central-column">
-            <h4 class="hotel-name">Desert Quail Inn</h4>
-            <span class="results-hotel-type">Мотель</span>
-            <span class="results-price-range">от 2000 Р.</span>
-            <a class="btn btn-more" href="#">Подробнее</a>
-            <a class="btn btn-book" href="#">Забронировать</a>
+            <div class="results-hotel clearfix">
+                <img src="./img/hotels-desert-135x90.jpg" alt="Desert Quail Inn" width="135" height="90">
+                <div class="central-column">
+                    <h4 class="hotel-name">Desert Quail Inn</h4>
+                    <span class="results-hotel-type">Мотель</span>
+                    <span class="results-price-range">от 2000 Р.</span>
+                    <a class="btn btn-more" href="#">Подробнее</a>
+                    <a class="btn btn-book" href="#">Забронировать</a>
+                </div>
+                <div class="stars clearfix">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                </div>
+                <div class="rating">Рейтинг: 8,9</div> 
             </div>
-            <div class="rating">Рейтинг: 8,9</div>
-        </div>
         </div>
         <div class="hotel">
-        <div class="results-hotel clearfix">
-            <img src="img/hotels-villas-135x90.jpg" alt="Villas at Poco Diablo" width="135" height="90">
-            <div class="central-column">
-            <h4 class="hotel-name">Villas at Poco Diablo</h4>
-            <span class="results-hotel-type">Апартаменты</span>
-            <span class="results-price-range">от 4000 Р.</span>
-            <a class="btn btn-more" href="#">Подробнее</a>
-            <a class="btn btn-book" href="#">Забронировать</a>
+            <div class="results-hotel clearfix">
+                <img src="./img/hotels-villas-135x90.jpg" alt="Villas at Poco Diablo" width="135" height="90">
+                <div class="central-column">
+                    <h4 class="hotel-name">Villas at Poco Diablo</h4>
+                    <span class="results-hotel-type">Апартаменты</span>
+                    <span class="results-price-range">от 4000 Р.</span>
+                    <a class="btn btn-more" href="#">Подробнее</a>
+                    <a class="btn btn-book" href="#">Забронировать</a>
+                </div>
+                <div class="stars clearfix">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                </div>
+                <div class="rating">Рейтинг: 9,2</div>
             </div>
-            <div class="rating">Рейтинг: 9,2</div>
-        </div>
         </div>
     </div>
-    <footer class="main-footer">
+    <footer class="main-footer inner-footer">
         <div class="container clearfix">
-            <div class="hashtag">#visitsedona</div>
+            <span class="hashtag">#visitsedona</span>
             <div class="footer-social">
-                <a href="#" class="social-btn social-btn-tw">Twitter</a>
-                <a href="#" class="social-btn social-btn-fb">Facebook</a>
-                <a href="#" class="social-btn social-btn-youtube">Youtube</a>
+                <a href="#" class="social-btn social-btn-tw"><i class="icon-twitter"></i></a>
+                <a href="#" class="social-btn social-btn-fb"><i class="icon-facebook"></i></a>
+                <a href="#" class="social-btn social-btn-youtube"><i class="icon-youtube"></i></a>
             </div>
             <div class="footer-copyright">
                 <span class="website">Website by</span>
-                <img src="img/htmlacademy-logo-113x39.png" alt="HTML Academy" width="113" height="39" >
+                <a href="#">
+                    <img src="img/htmlacademy-logo-113x39.png" alt="HTML Academy" width="113" height="39">
+                </a>
             </div>
         </div>
     </footer>
 </body>
-
 </html>
