@@ -426,25 +426,33 @@ h2 {
 }
 .column label {
     display: block;
-    padding: 0px 5px;
-    margin-bottom: 14px;
+    padding: 5px 5px;
+    margin-bottom: 9px;
 }
 .feature-search-form input[type="checkbox"] {
     display: none;
 }
-.icon-check-off:before {
+.feature-search-form input[type="checkbox"] + label::before {
+    content: "\2610";
     font-size: 25px;
-    margin-top: 5px;
     position: relative;
-    left: -11px;
     top: 4px;
-}
-.icon-check-on:before {
-    font-size: 25px;
-    margin-top: 5px;
-    position: relative;
     left: -11px;
-    top: 5px;
+    color: #b5b5b5;
+}
+.feature-search-form input[type="checkbox"]:checked + label::before {
+    content: "\2611";
+    font-size: 25px;
+    position: relative;
+    top: 4px;
+    left: -11px;
+    color: #b5b5b5;
+}
+.feature-search-form input[type="checkbox"]:disabled + label::before {
+    color: #6a6a6a;
+}
+.feature-search-form input[type="checkbox"] + label:hover {
+    color: #000000;
 }
 .infrastructure {
     margin: 12px 46px;
@@ -525,14 +533,17 @@ h2 {
     cursor: pointer;
     border: 8px solid #fff;
     border-radius: 50%;
+    background: #ababab;
 }
 .range-controls .toggle-min {
     left: 4px;
-    background: #ababab;
 }
 
 .range-controls .toggle-max {
     left: 160px;
+}
+.range-controls .toggle-min:hover,
+.range-controls .toggle-max:hover {
     background: #1c4f80;
 }
 fieldset {
@@ -572,16 +583,26 @@ fieldset {
 .results label {
     font-size: 12px;
     line-height: 18px;
-    color: #81b3d2;
     margin-right: 29px;
+    color: #cacaca;
+    border-bottom: 1px dotted #81b3d2;
 }
 .results input[type="checkbox"] {
     display: none;
 }
+.results input[type="checkbox"] + label:checked {
+    color: #81b3d2;
+}
+.results input[type="checkbox"] + label:hover {
+    color: #81b3d2;
+}
+.results input[type="checkbox"] + label:active {
+    color: #000000;
+}
 .icon-up-dir,
 .icon-down-dir {
     font-size: 21px;
-    color: #81b3d2;
+    color: #cccccc;
     position: relative;
 }
 .icon-up-dir {
@@ -592,6 +613,17 @@ fieldset {
     left: 74px;
     top: 2px;
 }
+.icon-down-dir:checked {
+    color: #81b3d2; 
+}
+.icon-up-dir:hover,
+.icon-down-dir:hover {
+    color: #000000;
+} 
+.icon-up-dir:active,
+.icon-down-dir:active {
+    color: #81b3d2;
+} 
 .results-container {
     width: 768px;
     margin: 0 auto;
