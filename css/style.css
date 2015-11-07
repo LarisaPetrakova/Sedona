@@ -306,6 +306,8 @@ h2 {
     text-transform: uppercase;
     border: none;
 }
+/* Всплывающая форма*/
+
 .hotel-form {
     position: relative;
     padding: 55px;
@@ -314,6 +316,46 @@ h2 {
     z-index: 2;
     background-color: #ffffff;
     display: none;
+}
+@-webkit-keyframes appear {
+   from { opacity: 0; }
+}
+@keyframes appear {
+   from { opacity: 0; }
+}
+.hotel-form-show {
+    display: block;
+    -webkit-animation: appear 0.6s;
+    animation: appear 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+.modal-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 .row {
     margin-bottom: 3px;
