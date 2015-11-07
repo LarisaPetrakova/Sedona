@@ -292,12 +292,19 @@ h2 {
     margin-bottom: 45px;
 }
 .hotel-search {
+    width: 100%;
     background-color: #766357;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
+    line-height: 26px;
     font-weight: bold;
     color: #ffffff;
-    padding: 33px 0;
+    padding-top: 31px;
+    padding-bottom: 29px;
     margin-bottom: 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
 }
 .hotel-form {
     position: relative;
@@ -306,7 +313,7 @@ h2 {
     line-height: 26px;
     z-index: 2;
     background-color: #ffffff;
-    margin-bottom: 78px;
+    display: none;
 }
 .row {
     margin-bottom: 3px;
@@ -777,6 +784,7 @@ fieldset {
 /* Стили футера */
 
 .main-footer {
+    margin-top: 472px;
     position: relative;
     padding: 6px 32px;
     z-index: 3;
