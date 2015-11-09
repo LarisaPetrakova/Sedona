@@ -463,6 +463,15 @@ h2 {
     padding: 7px 0;
     margin-right: 26px;
 }
+.hotel-form input::-webkit-input-placeholder {
+    color: #000000;
+}
+.hotel-form input:-moz-placeholder {
+    color: #000000;
+}
+.hotel-form input:-ms-input-placeholder {
+    color: #000000;
+}
 .btn-find {
     border: none;
     width: 100%;
