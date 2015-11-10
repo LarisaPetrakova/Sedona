@@ -12,15 +12,16 @@ link.addEventListener("click", function (event) {
           dateout.focus();
         } else {
           datein.focus();
-        }
+        };
+    popup.classList.remove("modal-error");
 });
 
 popup.addEventListener("submit", function (event) {
      if (!datein.value || !dateout.value) {
          event.preventDefault();
          popup.classList.remove("modal-error");
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add("modal-error");
+         popup.offsetWidth = popup.offsetWidth;
+         popup.classList.add("modal-error");
         } else {
           localStorage.setItem("datein", datein.value);
         }
