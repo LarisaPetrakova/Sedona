@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css" >
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/sedona-logo-138x70.png" alt="Логотип" width="138" height="70">
+                </a>
+            </div>
+            <nav class="main-navigation">
+                <ul class="clearfix">
+                    <li class="left">
+                        <a class="nav-link" href="#">Информация</a>
+                    </li>
+                    <li class="left">
+                        <a class="nav-link" href="#">Фото и видео</a>
+                    </li>
+                    <li class="right">
+                        <a class="nav-link" href="hotels.html">Гостиницы</a>
+                    </li>
+                    <li class="right">
+                        <a class="nav-link" href="#">Карта штата</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <form class="hotel-form inner-form clearfix" action="#" method="get">
+                <div class="row row1 clearfix">
+                    <label class="column-left" for="date-in">Дата заезда:</label>
+                    <input class="column-right input big" type="text" placeholder="24 апреля 2014" name="date-in" id="date-in">
+                    <i class="icon-calendar"></i>
+                </div>
+                <div class="row row2 clearfix">
+                    <label class="column-left" for="date-out">Дата выезда:</label>
+                    <input class="column-right input big" type="text" placeholder="4 июля 2014" name="date-out" id="date-out">
+                    <i class="icon-calendar"></i>
+                </div>
+                <div class="row row3 clearfix">
+                    <label class="column-left" for="adults">Взрослые:</label>
+                    <div class="column-right">
+                        <input class="input small adults" type="text" value="2" name="adults" id="adults">
+                        <i class="icon-minus icon-minus-adults"></i>
+                        <i class="icon-plus icon-plus-adults"></i>
+                        <input class="input small kids" type="text" value="0" name="children" id="children">
+                        <i class="icon-minus icon-minus-kids"></i>
+                        <i class="icon-plus icon-plus-kids"></i>
+                        <label class="label-kids" for="children">Дети:</label>
+                    </div>
+                </div>
+                <div class="button clearfix">
+                    <input class="btn-find" type="submit" value="Найти">
+                </div>
+            </form>
+        <footer class="inner-footer">
+        <div class="container clearfix">
+            <span class="hashtag">#visitsedona</span>
+            <div class="footer-social">
+                <a href="#" class="social-btn social-btn-tw"><i class="icon-twitter"></i></a>
+                <a href="#" class="social-btn social-btn-fb"><i class="icon-facebook"></i></a>
+                <a href="#" class="social-btn social-btn-youtube"><i class="icon-youtube"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <span class="website">Website by</span>
+                <a href="#" class="academy-logo">HTML Academy
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
