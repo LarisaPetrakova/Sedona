@@ -503,20 +503,12 @@ h2 {
 .map {
     position: absolute;
     left: 0;
-    z-index: 2;
-}
-.map-jpeg {
-    display: block;
-}
-.no-js iframe {
-    display: none;
-}
-.no-js .map-jpeg {
-    position: absolute;
-    left: 0;
-    top: 0px;
     z-index: 1;
+    background-image: url("../img/map-768x593.jpg");
+    width: 768px;
+    height: 593px;
 }
+
 /*стили для hotels*/
 .feature-search-form {
     background-color: #81b3d2;
