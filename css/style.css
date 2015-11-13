@@ -351,10 +351,10 @@ h2 {
   animation: shake 0.6s;
 }
 .row {
-    margin-bottom: 3px;
+    margin-bottom: 30px;
 }
 .row3 {
-    margin-bottom: 52px;
+    margin-bottom: 54px;
 }
 .column-left {
     float: left;
@@ -371,7 +371,9 @@ h2 {
 .hotel-form .input {
     border: 2px solid #f2f2f2;
     background-color: #f2f2f2;
-    padding: 8px 4px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 5px;
     font-size: 14px;
     font-weight: normal;
     font-family: "PT Sans", "Arial", sans-serif;
@@ -386,11 +388,22 @@ h2 {
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
 }
+.hotel-form .date-in {
+    padding-top: 8px;
+    padding-right: 0;
+    padding-left: 11px;
+    position: relative;
+}
+.hotel-form .date-out {
+    padding-right: 2px;
+    padding-left: 11px;
+    position: relative;
+}
 .icon-calendar {
     font-size: 21px;
-    position: relative;
-    top: -30px;
-    right: -384px;
+    position: absolute;
+    left: 478px;
+    padding-top: 7px;
     color: #c2c2c2;
 }
 .icon-calendar:hover {
@@ -401,7 +414,7 @@ h2 {
 }
 .big {
     float: right;
-    width: 333px;
+    width: 329px;
     text-transform: uppercase;
 }
 .small {
@@ -450,11 +463,12 @@ h2 {
 }
 .kids {
     float: right;
+    padding-right: 5px;
 }
 .label-kids {
     float: right;
-    padding: 7px 3px;
-    margin-right: 26px;
+    padding: 6px 3px;
+    margin-right: 23px;
 }
 .hotel-form input::-webkit-input-placeholder {
     color: #000000;
@@ -492,7 +506,7 @@ h2 {
     z-index: 2;
 }
 .map-jpeg {
-    display: none;
+    display: block;
 }
 .no-js iframe {
     display: none;
@@ -527,30 +541,32 @@ h2 {
 }
 .column label {
     display: block;
-    padding-top: 7px;
-    padding-left: 19px;
+    padding-top: 11px;
+    padding-left: 39px;
     padding-bottom: 8px;
     margin-bottom: 6px;
+    position: relative;
 }
 .feature-search-form input[type="checkbox"] {
     display: none;
 }
 .feature-search-form input[type="checkbox"] + label::before {
+    display: block;
     content: "\2610";
     font-family: "symbols-sedona";
     font-size: 26px;
-    position: relative;
-    top: 5px;
-    left: -19px;
+    position: absolute;
+    top: 12px;
+    left: 0;
     color: #b5b5b5;
 }
 .feature-search-form input[type="checkbox"]:checked + label::before {
     content: "\2611";
     font-family: "symbols-sedona";
     font-size: 26px;
-    position: relative;
-    top: 5px;
-    left: -19px;
+    position: absolute;
+    top: 12px;
+    left: 0px;
     color: #b5b5b5;
 }
 .feature-search-form input[type="checkbox"]:disabled + label::before {
@@ -857,7 +873,7 @@ fieldset {
     margin: 0 auto;
 }
 .inner-form .icon-calendar {
-    left: 420px;
+    left: 475px;
 }
 
 /* Стили футера */
