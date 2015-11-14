@@ -497,6 +497,7 @@ h2 {
 .btn-find:active {
     background-color: #5496bd;
     color: #94b9d2;
+    outline: none;
 }
 
 /* Карта */
@@ -675,7 +676,10 @@ fieldset {
     background: transparent;
     margin-left: 52px;
     color: #ffffff;
-    font-size: 14px; 
+    font-size: 14px;
+}
+.btn-show:active {
+    outline: none;
 }
 .results {
     width: 678px;
